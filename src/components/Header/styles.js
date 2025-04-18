@@ -13,7 +13,6 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   gap: ${SPACING.medium};
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
 /**
