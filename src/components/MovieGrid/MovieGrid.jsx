@@ -1,5 +1,7 @@
+import React from "react";
+import styled from "@emotion/styled";
+import MovieCard from "../MovieCard/MovieCard";
 import { useCallback } from "react";
-import { MovieCard } from "../MovieCard/MovieCard";
 import { useMovies } from "../../hooks/useMovies";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import { getImageUrl } from "../../services/api";
@@ -14,13 +16,8 @@ import { STRINGS } from "../../constants/strings";
  */
 export const MovieGrid = () => {
   const { searchQuery } = useSearch();
-  const {
-    movies,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    status
-  } = useMovies(searchQuery);
+  const { movies, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
+    useMovies(searchQuery);
 
   const handleIntersect = useCallback(() => {
     if (hasNextPage) {
@@ -87,3 +84,5 @@ export const MovieGrid = () => {
     </Grid>
   );
 };
+
+export default MovieGrid;

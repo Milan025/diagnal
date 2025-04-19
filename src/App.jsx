@@ -21,11 +21,12 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <SearchProvider>
           <GlobalStyles />
-          <div style={{ 
-            maxWidth: "100vw", 
-            overflowX: "hidden",
-            paddingTop: "72px" // Add padding to account for fixed header
-          }}>
+          <div
+            style={{
+              maxWidth: "100vw",
+              overflowX: "hidden",
+            }}
+          >
             <Header title={STRINGS.HEADER.TITLE} />
             <MovieGrid />
           </div>
