@@ -1,34 +1,33 @@
 import styled from "@emotion/styled";
-import { COLORS, SPACING, FONT_SIZES } from "../../constants/theme";
+import { COLORS } from "../../constants/theme";
 
 export const EmptyStateContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: ${SPACING.xlarge};
+  padding: 56px 32px 32px;
   text-align: center;
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   background-color: ${COLORS.background};
 `;
 
 export const Icon = styled.div`
-  font-size: 64px;
+  font-size: 56px;
   color: ${COLORS.primary};
-  margin-bottom: ${SPACING.medium};
   opacity: 0.7;
 `;
 
 export const Title = styled.h2`
-  font-size: ${FONT_SIZES.large};
+  font-size: 20px;
   color: ${COLORS.text};
-  margin-bottom: ${SPACING.small};
-  font-weight: 600;
+  font-weight: 100;
 `;
 
 export const Description = styled.p`
-  font-size: ${FONT_SIZES.medium};
+  font-size: 16px;
   color: ${COLORS.textSecondary};
   max-width: 400px;
   line-height: 1.5;
+  font-weight: 100;
 `;

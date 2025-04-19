@@ -1,4 +1,5 @@
 import { useSearch } from "../../contexts/SearchContext";
+import { useState, useEffect } from "react";
 import {
   HeaderContainer,
   BackButton,
@@ -15,6 +16,17 @@ import { SearchInput } from "../SearchInput/SearchInput";
  */
 export const Header = ({ title }) => {
   const { isSearching, setIsSearching, setSearchQuery } = useSearch();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   /**
    * Handles the search button click
@@ -34,7 +46,7 @@ export const Header = ({ title }) => {
   };
 
   return (
-    <HeaderContainer>
+    <HeaderContainer isScrolled={isScrolled}>
       {isSearching ? (
         <>
           <BackButton onClick={handleBackClick}>

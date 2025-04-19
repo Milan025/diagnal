@@ -36,11 +36,4 @@ export const STRINGS = {
         "We couldn't find any movies matching your search. Try a different search term.",
     },
   },
-  /** Loading state strings */
-  LOADING: {
-    /** Initial loading message */
-    INITIAL: "Loading...",
-    /** Message shown when loading more items */
-    MORE: "Loading more...",
-  },
 };

@@ -21,7 +21,12 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <SearchProvider>
           <GlobalStyles />
-          <div style={{ maxWidth: "100vw", overflowX: "hidden" }}>
+          <div
+            style={{
+              maxWidth: "100vw",
+              overflowX: "hidden",
+            }}
+          >
             <Header title={STRINGS.HEADER.TITLE} />
             <MovieGrid />
           </div>

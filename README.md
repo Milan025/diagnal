@@ -9,6 +9,8 @@ src/
 │   ├── MovieCard/          # Individual movie card component
 │   ├── MovieGrid/          # Grid layout for movies
 │   └── SearchInput/        # Reusable search input component
+│   └── Skeleton/           # Skeleton component
+│   └── Spinner/            # Spinner component
 ├── constants/
 │   ├── strings.js          # String constants
 │   └── theme.js            # Theme constants (colors, spacing, fonts)
@@ -23,22 +25,47 @@ src/
     └── GlobalStyles.js     # Global styles
 ```
 
-## Installation
+## Installation and Setup
 
-1. Install dependencies:
+1. **Prerequisites**
+   - Node.js (v16 or higher)
+   - npm (v8 or higher)
 
+2. **Clone the repository**
+```bash
+git clone https://github.com/Milan025/diagnal.git
+```
+
+3. **Navigate to project directory**
+```bash
+cd diagnal
+```
+
+4. **Install dependencies**
 ```bash
 npm install
 ```
 
-2. Start the development server:
-
+5. **Start development server**
 ```bash
 npm run dev
 ```
 
-3. Build for production:
-
+6. **Build for production**
 ```bash
 npm run build
 ```
+
+7. **Preview production build**
+```bash
+npm run preview
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors
+

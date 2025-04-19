@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS, SPACING, FONT_SIZES } from "../../constants/theme";
+import { COLORS, FONT_SIZES } from "../../constants/theme";
 
 /**
  * Styled input component for search functionality
@@ -9,7 +9,7 @@ export const SearchInput = styled.input`
   border: none;
   border-radius: 4px;
   color: ${COLORS.text};
-  padding: ${SPACING.small} ${SPACING.medium};
+  padding: 4px 8px;
   font-size: ${FONT_SIZES.medium};
   flex-grow: 1;
   font-family: "Titillium Web", sans-serif;

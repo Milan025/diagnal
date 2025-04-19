@@ -1,28 +1,40 @@
-import { useState } from "react";
-import { Card, Image, Title, Fallback, FallbackIcon } from "./styles";
+import React, { useState } from "react";
+import { Skeleton } from "../Skeleton/Skeleton";
+import { Card, ImageContainer, MovieImage, MovieTitle } from "./styles";
 
-export const MovieCard = ({ name, imageUrl }) => {
-  const [imageError, setImageError] = useState(false);
+const MovieCard = ({ name, imageUrl }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
 
-  if (!name || !imageUrl) {
-    return null;
-  }
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   return (
     <Card>
-      {imageError ? (
-        <Fallback>
-          <FallbackIcon>🎬</FallbackIcon>
-        </Fallback>
-      ) : (
-        <Image
+      <ImageContainer>
+        {!imageLoaded && (
+          <Skeleton
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              borderRadius: 0,
+            }}
+          />
+        )}
+        <MovieImage
           src={imageUrl}
           alt={name}
-          onError={() => setImageError(true)}
+          onLoad={handleImageLoad}
+          isLoaded={imageLoaded}
           loading="lazy"
         />
-      )}
-      <Title>{name}</Title>
+      </ImageContainer>
+      <MovieTitle>{name}</MovieTitle>
     </Card>
   );
 };
+
+export default MovieCard;
