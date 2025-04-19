@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS, SPACING, FONT_SIZES } from "../../constants/theme";
+import { COLORS, FONT_SIZES } from "../../constants/theme";
 
 /**
  * Styled input component for search functionality

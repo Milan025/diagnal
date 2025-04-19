@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS, SPACING, FONT_SIZES } from "../../constants/theme";
+import { COLORS } from "../../constants/theme";
 
 export const EmptyStateContainer = styled.div`
   display: flex;

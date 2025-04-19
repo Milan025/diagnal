@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "@emotion/styled";
 import MovieCard from "../MovieCard/MovieCard";
 import { useCallback } from "react";
 import { useMovies } from "../../hooks/useMovies";

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS, SPACING, FONT_SIZES } from "../../constants/theme";
+import { COLORS, SPACING } from "../../constants/theme";
 
 /**
  * Container for the header component

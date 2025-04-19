@@ -68,26 +68,3 @@ export const Title = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
 `;
-
-export const Fallback = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    145deg,
-    ${COLORS.gradient.start},
-    ${COLORS.gradient.end}
-  );
-  color: ${COLORS.textSecondary};
-  padding: ${SPACING.large};
-  text-align: center;
-`;
-
-export const FallbackIcon = styled.div`
-  font-size: ${FONT_SIZES.xlarge};
-  margin-bottom: ${SPACING.small};
-  opacity: 0.8;
-`;
