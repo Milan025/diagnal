@@ -5,10 +5,11 @@ import { useCallback } from "react";
 import { useMovies } from "../../hooks/useMovies";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import { getImageUrl } from "../../services/api";
-import { Grid, LoadingText } from "./styles";
+import { Grid, LoadingSpinner } from "./styles";
 import { useSearch } from "../../contexts/SearchContext";
 import { EmptyState } from "../EmptyState/EmptyState";
 import { STRINGS } from "../../constants/strings";
+import Spinner from "../Spinner/Spinner";
 
 /**
  * MovieGrid component that displays a grid of movies with infinite scroll
@@ -28,7 +29,11 @@ export const MovieGrid = () => {
   const intersectionRef = useIntersectionObserver(handleIntersect);
 
   if (status === "loading") {
-    return <LoadingText>{STRINGS.LOADING.INITIAL}</LoadingText>;
+    return (
+      <LoadingSpinner>
+        <Spinner />
+      </LoadingSpinner>
+    );
   }
 
   if (status === "error") {
@@ -77,9 +82,9 @@ export const MovieGrid = () => {
         />
       )}
       {isFetchingNextPage && (
-        <LoadingText style={{ gridColumn: "1 / -1" }}>
-          {STRINGS.LOADING.MORE}
-        </LoadingText>
+        <LoadingSpinner style={{ gridColumn: "1 / -1" }}>
+          <Spinner />
+        </LoadingSpinner>
       )}
     </Grid>
   );

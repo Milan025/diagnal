@@ -29,7 +29,7 @@ export const Grid = styled.div`
   }
 `;
 
-export const LoadingText = styled.div`
+export const LoadingSpinner = styled.div`
   text-align: center;
   padding: ${SPACING.medium};
   color: ${COLORS.text};

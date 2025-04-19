@@ -10,6 +10,7 @@ src/
 │   ├── MovieGrid/          # Grid layout for movies
 │   └── SearchInput/        # Reusable search input component
 │   └── Skeleton/           # Skeleton component
+│   └── Spinner/            # Spinner component
 ├── constants/
 │   ├── strings.js          # String constants
 │   └── theme.js            # Theme constants (colors, spacing, fonts)
