@@ -70,3 +70,16 @@ export const Title = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
 `;
+
+export const LoaderContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+`;

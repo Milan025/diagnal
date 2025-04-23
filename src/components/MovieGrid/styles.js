@@ -5,7 +5,7 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: ${SPACING.large};
-  padding: ${SPACING.large};
+  padding: 56px 8px 8px 8px;
 
   /* Tablet view */
   @media (max-width: 1024px) {
